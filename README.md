@@ -1,5 +1,3 @@
-# AdvancedProgramming_15
-
 # Advanced Programming | ALDH1 Inhibition Prediction.
 
 This project focuses on the use of the preprocessed data to train several machine learning networks to predict ALDH1 inhibition.
