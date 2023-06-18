@@ -42,3 +42,7 @@ To run the notebooks or scripts, follow the steps below:
 
    ```shell
    git clone [https://github.com/Tomvhattem/AdvancedProgramming_15]
+
+## Statements
+
+Formatting of this readme is done by ChatGPT
