@@ -5,7 +5,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+<<<<<<< HEAD
 from sklearn.preprocessing import MinMaxScaler
+=======
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+>>>>>>> f543963ef1346d407e8ba632fd715a0658c459a8
 from sklearn.decomposition import PCA
 
 file_name = 'tested_molecules-1.csv'
@@ -15,8 +19,20 @@ file_name = 'tested_molecules-1.csv'
 #     return df
 
 # df_molecules = read_data(file_name)
+<<<<<<< HEAD
 def filter_df():
     df_molecules = pd.read_csv(file_name)
+=======
+def smile_to_df(input_file):
+    '''
+        Input:
+            input_file[string]: input file name of the csv file
+        Output:
+            df_data[pandas Dataframe]:processed molecule dataset
+            df_molecules[pandas Dataframe]: original dataset in dataframe format
+        '''
+    df_molecules = pd.read_csv(input_file)
+>>>>>>> f543963ef1346d407e8ba632fd715a0658c459a8
     descriptions_list = [n[0] for n in Descriptors._descList]
     descriptions_calculator =  MoleculeDescriptors.MolecularDescriptorCalculator(descriptions_list)
 
@@ -55,6 +71,7 @@ def filter_df():
     df_normalized.index = df_molecules.index
     df_data = pd.concat([df_molecules,df_normalized,df_group],axis=1)
 
+<<<<<<< HEAD
     df_data.corr()
 
     df_data.set_index('ALDH1_inhibition', inplace=True)
@@ -65,6 +82,13 @@ def filter_df():
 
 
 
+=======
+
+    return df_data, df_molecules
+#     df_data.corr()
+# df_data,df_molecules = smile_to_df(file_name)
+# df_data.set_index('ALDH1_inhibition', inplace=True)
+>>>>>>> f543963ef1346d407e8ba632fd715a0658c459a8
 # pca = PCA()
 # X_pca = pca.fit_transform(df_filtered)
 
